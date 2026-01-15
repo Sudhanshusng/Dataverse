@@ -28,8 +28,8 @@ export default function AboutPage() {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-16 sm:py-24 lg:px-8">
-        <div className="mb-16 text-center">
+      <div className="container mx-auto px-4 py-16 lg:px-8">
+        <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             About Us
           </h1>
@@ -73,7 +73,7 @@ export default function AboutPage() {
           </div>
         </div>
         
-        <div className="mt-20 text-center">
+        <div className="mt-16 text-center">
             <h2 className="font-headline text-3xl font-bold">Our Core Values</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">The principles that guide our work.</p>
         </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             ))}
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>

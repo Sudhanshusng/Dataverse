@@ -101,7 +101,7 @@ export default function Home() {
             opacity: 0.3,
           }}
         ></div>
-        <div className="relative z-10 container mx-auto flex flex-col items-center justify-center space-y-8 px-4 py-24 text-center sm:py-32 lg:px-8 min-h-[70vh]">
+        <div className="relative z-10 container mx-auto flex flex-col items-center justify-center space-y-8 px-4 py-20 text-center sm:py-24 lg:px-8 min-h-[60vh]">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary/75 opacity-75"></span>
@@ -133,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="offerings" className="w-full py-16 md:py-24">
+      <section id="offerings" className="w-full py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Offerings</h2>
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="process" className="w-full py-16 md:py-24">
+      <section id="process" className="w-full py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Process</h2>
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-us" className="w-full bg-secondary/20 py-16 md:py-24">
+      <section id="why-us" className="w-full bg-secondary/20 py-16">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 lg:px-8">
           <div className="space-y-6">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Work With Us?</h2>
@@ -222,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="industries" className="w-full py-16 md:py-24">
+      <section id="industries" className="w-full py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Industries We Serve</h2>
@@ -241,7 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="cta" className="w-full bg-secondary/20 py-16 md:py-24">
+      <section id="cta" className="w-full bg-secondary/20 py-16">
         <div className="container mx-auto text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to improve your data & AI systems?</h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">Let's discuss how we can help you achieve your goals. Your first strategy call is on us.</p>

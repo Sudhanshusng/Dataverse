@@ -74,8 +74,8 @@ const solutions = [
 export default function SolutionsPage() {
   return (
     <>
-      <div className="container mx-auto px-4 py-16 sm:py-24 lg:px-8">
-        <div className="mb-16 text-center">
+      <div className="container mx-auto px-4 py-16 lg:px-8">
+        <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             Our Solutions
           </h1>
@@ -84,7 +84,7 @@ export default function SolutionsPage() {
           </p>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-20">
           {solutions.map((solution, index) => (
             <div key={solution.title} id={solution.id} className="grid scroll-mt-24 grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-16">
               <div className={index % 2 === 1 ? 'md:order-last' : ''}>

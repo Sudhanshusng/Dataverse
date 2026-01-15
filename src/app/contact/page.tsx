@@ -57,8 +57,8 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16 sm:py-24 lg:px-8">
-      <div className="mb-16 text-center">
+    <div className="container mx-auto px-4 py-16 lg:px-8">
+      <div className="mb-12 text-center">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
           Contact Us
         </h1>
