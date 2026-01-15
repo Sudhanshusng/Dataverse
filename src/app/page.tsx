@@ -64,6 +64,29 @@ const industries = [
   { icon: <ShoppingCart className="h-8 w-8" />, name: 'E-commerce' },
 ];
 
+const processSteps = [
+    {
+      step: '01',
+      title: 'Discovery',
+      description: 'We start by understanding your goals and challenges.',
+    },
+    {
+      step: '02',
+      title: 'Design',
+      description: 'We create a blueprint for a scalable solution.',
+    },
+    {
+      step: '03',
+      title: 'Develop',
+      description: 'We build and test your system iteratively.',
+    },
+    {
+      step: '04',
+      title: 'Deploy',
+      description: 'We roll out the solution into your production environment.',
+    },
+  ];
+
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-abstract');
 
@@ -110,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="offerings" className="w-full py-20 md:py-28">
+      <section id="offerings" className="w-full py-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Offerings</h2>
@@ -133,8 +156,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <section id="process" className="w-full py-16 md:py-24">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Process</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">A straightforward approach to delivering value.</p>
+          </div>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {processSteps.map((step) => (
+              <Card key={step.title} className="text-center">
+                <CardHeader>
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-xl font-bold text-primary">
+                    {step.step}
+                  </div>
+                  <CardTitle className="pt-4 font-headline text-xl">{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+           <div className="mt-12 text-center">
+            <Button asChild variant="outline">
+              <Link href="/how-it-works">
+                Learn More About Our Process
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
 
-      <section id="why-us" className="w-full bg-secondary/20 py-20 md:py-28">
+      <section id="why-us" className="w-full bg-secondary/20 py-16 md:py-24">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 lg:px-8">
           <div className="space-y-6">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Work With Us?</h2>
@@ -167,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="industries" className="w-full py-20 md:py-28">
+      <section id="industries" className="w-full py-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Industries We Serve</h2>
@@ -186,7 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="cta" className="w-full bg-secondary/20 py-20 md:py-28">
+      <section id="cta" className="w-full bg-secondary/20 py-16 md:py-24">
         <div className="container mx-auto text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to improve your data & AI systems?</h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">Let's discuss how we can help you achieve your goals. Your first strategy call is on us.</p>
