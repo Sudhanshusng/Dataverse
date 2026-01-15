@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import CtaSection from '@/components/shared/cta-section';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const caseStudies = [
   {
@@ -45,7 +46,7 @@ export default function CaseStudiesPage() {
             Case Studies
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-xl text-muted-foreground">
-            Real-world examples of how I solve complex data challenges and deliver business value.
+            Real-world examples of how we solve complex data challenges and deliver business value.
           </p>
         </div>
 
@@ -95,7 +96,20 @@ export default function CaseStudiesPage() {
         </div>
         
         <div className="mt-16 text-center">
-            <p className="text-lg text-muted-foreground">More case studies are being prepared and will be published soon.</p>
+            <Card className="inline-block">
+                <CardHeader>
+                    <CardTitle className="font-headline">More Success Stories Coming Soon</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-muted-foreground">We are currently documenting more of our client success stories.</p>
+                    <p className="mt-2 text-muted-foreground">Curious if we can help you? Let's talk.</p>
+                </CardContent>
+                <CardFooter className="justify-center">
+                    <Button asChild>
+                      <Link href="/contact">Discuss Your Project</Link>
+                    </Button>
+                </CardFooter>
+            </Card>
         </div>
       </div>
       <CtaSection />

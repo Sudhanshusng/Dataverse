@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import CtaSection from '@/components/shared/cta-section';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const blogPosts = [
   {
@@ -12,7 +13,7 @@ const blogPosts = [
     description: 'A deep dive into Retrieval-Augmented Generation and fine-tuning, helping you choose the best approach for your custom AI assistants.',
     category: 'RAG Systems',
     image: PlaceHolderImages.find((img) => img.id === 'blog-ai'),
-    author: 'Jane Doe',
+    author: 'Dataverse Team',
     date: 'October 26, 2023',
     href: '#',
   },
@@ -21,7 +22,7 @@ const blogPosts = [
     description: 'Learn the foundational principles our team uses to build robust, scalable, and maintainable data engineering platforms on the cloud.',
     category: 'Data Engineering',
     image: PlaceHolderImages.find((img) => img.id === 'blog-data'),
-    author: 'John Smith',
+    author: 'Dataverse Team',
     date: 'October 22, 2023',
     href: '#',
   },
@@ -30,7 +31,7 @@ const blogPosts = [
     description: 'Cybersecurity is not an afterthought. Use this checklist to conduct a basic security audit of your cloud infrastructure and protect your data.',
     category: 'Cloud Security',
     image: PlaceHolderImages.find((img) => img.id === 'blog-security'),
-    author: 'Alex Johnson',
+    author: 'Dataverse Team',
     date: 'October 18, 2023',
     href: '#',
   },
@@ -83,7 +84,20 @@ export default function BlogPage() {
           ))}
         </div>
         <div className="mt-16 text-center">
-            <p className="text-lg text-muted-foreground">More articles coming soon...</p>
+          <Card className="inline-block">
+              <CardHeader>
+                  <CardTitle className="font-headline">Stay Tuned</CardTitle>
+              </CardHeader>
+              <CardContent>
+                  <p className="text-muted-foreground">We're just getting started. More articles and insights are on the way.</p>
+                  <p className="mt-2 text-muted-foreground">Have a topic you'd like us to cover? Let us know!</p>
+              </CardContent>
+              <CardFooter className="justify-center">
+                  <Button asChild>
+                    <Link href="/contact">Suggest a Topic</Link>
+                  </Button>
+              </CardFooter>
+          </Card>
         </div>
       </div>
       <CtaSection />

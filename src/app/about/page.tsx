@@ -2,6 +2,26 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import CtaSection from '@/components/shared/cta-section';
+import { CheckCircle } from 'lucide-react';
+
+const coreValues = [
+    {
+        title: 'Pragmatism',
+        description: 'We focus on what works, delivering practical solutions that provide real-world value over theoretical perfection.',
+    },
+    {
+        title: 'Partnership',
+        description: 'We work with you, not just for you. Your business context is key to building a successful solution.',
+    },
+    {
+        title: 'Security by Design',
+        description: 'Security is not an afterthought. It is a foundational component of every system we build.',
+    },
+    {
+        title: 'Maintainability',
+        description: 'We build systems that are easy to understand, manage, and scale, ensuring long-term success.',
+    }
+]
 
 export default function AboutPage() {
   const founderImage = PlaceHolderImages.find((img) => img.id === 'about-founder');
@@ -11,10 +31,10 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:px-8">
         <div className="mb-16 text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-            About Me
+            About Us
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
-            My background and my approach to building effective data solutions.
+            Our background and our approach to building effective data solutions.
           </p>
         </div>
 
@@ -22,17 +42,17 @@ export default function AboutPage() {
           <div className="md:col-span-2">
             <Card className="h-full">
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">My Story</CardTitle>
+                <CardTitle className="font-headline text-2xl">Our Story</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
-                  As a data engineer with four years of experience, I've seen how companies can struggle to turn their data into a real asset. Too often, projects get stuck in the prototype phase or become too complex to maintain.
+                  As a data engineer with four years of experience, our founder saw how companies can struggle to turn their data into a real asset. Too often, projects get stuck in the prototype phase or become too complex to maintain.
                 </p>
                 <p>
-                  I focus on building practical, secure, and maintainable AI and data systems. My goal is to deliver solutions that are not just technically sound, but that also provide clear business value.
+                  Dataverse was founded to change that. We focus on building practical, secure, and maintainable AI and data systems. Our goal is to deliver solutions that are not just technically sound, but that also provide clear business value.
                 </p>
                 <p>
-                  I believe in a collaborative approach, working closely with you to understand your challenges and build a solution that fits your needs.
+                  We believe in a collaborative approach, working closely with you to understand your challenges and build a solution that fits your needs.
                 </p>
               </CardContent>
             </Card>
@@ -48,29 +68,47 @@ export default function AboutPage() {
                 data-ai-hint={founderImage.imageHint}
               />
             )}
-            <h3 className="mt-6 font-headline text-xl font-semibold">Data Engineer</h3>
+            <h3 className="mt-6 font-headline text-xl font-semibold">Founder & Lead Engineer</h3>
             <p className="text-sm text-muted-foreground">AI & Data Specialist</p>
           </div>
+        </div>
+        
+        <div className="mt-20 text-center">
+            <h2 className="font-headline text-3xl font-bold">Our Core Values</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">The principles that guide our work.</p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {coreValues.map((value) => (
+                <Card key={value.title}>
+                    <CardHeader className='items-center'>
+                        <CheckCircle className="h-8 w-8 text-primary" />
+                        <CardTitle className="pt-2 font-headline text-xl">{value.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-center text-muted-foreground">{value.description}</p>
+                    </CardContent>
+                </Card>
+            ))}
         </div>
 
         <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle className="font-headline text-2xl">My Vision</CardTitle>
+              <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                To help businesses make better, data-driven decisions through reliable and secure systems. I aim to make data and AI accessible and effective, no matter the size of your company.
+                To help businesses make better, data-driven decisions through reliable and secure systems. We aim to make data and AI accessible and effective, no matter the size of your company.
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle className="font-headline text-2xl">My Tech Philosophy</CardTitle>
+              <CardTitle className="font-headline text-2xl">Our Tech Philosophy</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                I believe in building robust and scalable systems using modern, cloud-native technologies. I focus on practical, production-ready solutions over quick-and-dirty prototypes.
+                We believe in building robust and scalable systems using modern, cloud-native technologies. We focus on practical, production-ready solutions over quick-and-dirty prototypes.
               </p>
             </CardContent>
           </Card>

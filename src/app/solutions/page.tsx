@@ -10,7 +10,7 @@ const solutions = [
   {
     id: 'ai-assistants',
     title: 'Custom AI Assistants Trained on Your Business Data',
-    description: 'I build secure, intelligent AI assistants that understand your internal knowledge. Using RAG (Retrieval-Augmented Generation), you can chat with your documents and data sources in natural language.',
+    description: 'We build secure, intelligent AI assistants that understand your internal knowledge. Using RAG (Retrieval-Augmented Generation), you can chat with your documents and data sources in natural language.',
     useCases: [
       'Internal knowledge base search',
       'Customer support question answering',
@@ -29,7 +29,7 @@ const solutions = [
   {
     id: 'data-platforms',
     title: 'Modern Data Platforms That Scale With Your Business',
-    description: "I build end-to-end data engineering platforms that turn raw data into a strategic asset. From data ingestion to BI dashboards, I create a single source of truth to power your business decisions.",
+    description: "We build end-to-end data engineering platforms that turn raw data into a strategic asset. From data ingestion to BI dashboards, we create a single source of truth to power your business decisions.",
     services: [
       'Cloud data warehouse setup (e.g., BigQuery, Snowflake)',
       'Custom ETL/ELT pipeline development',
@@ -44,7 +44,7 @@ const solutions = [
   {
     id: 'ai-automation',
     title: 'Automate Your Business With AI',
-    description: 'I can help identify and automate repetitive, manual tasks in your workflows using AI. This can increase efficiency and reduce errors, freeing up your team for more valuable work.',
+    description: 'We can help identify and automate repetitive, manual tasks in your workflows using AI. This can increase efficiency and reduce errors, freeing up your team for more valuable work.',
     examples: [
       'Automated data extraction from documents',
       'Intelligent routing of support tickets or emails',
@@ -58,7 +58,7 @@ const solutions = [
   {
     id: 'cloud-security',
     title: 'Secure Your Data, AI & Cloud Infrastructure',
-    description: "Security is a critical part of any data system. I implement security best practices to protect your data, AI models, and cloud infrastructure from threats.",
+    description: "Security is a critical part of any data system. We implement security best practices to protect your data, AI models, and cloud infrastructure from threats.",
     services: [
       'Cloud security posture review',
       'Data encryption and protection strategies',
@@ -77,7 +77,7 @@ export default function SolutionsPage() {
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:px-8">
         <div className="mb-16 text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-            My Solutions
+            Our Solutions
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
             Practical AI and data systems designed to solve real business problems.
