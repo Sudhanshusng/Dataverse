@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-abstract",
+      "description": "Abstract image representing data and AI connections.",
+      "imageUrl": "https://images.unsplash.com/photo-1727434032773-af3cd98375ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjBkYXRhfGVufDB8fHx8MTc2ODM5MTY1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract data"
+    },
+    {
+      "id": "ai-assistant",
+      "description": "A visual for an AI knowledge assistant.",
+      "imageUrl": "https://images.unsplash.com/photo-1620429948700-24e48a41d5aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb2JvdCUyMGNoYXR8ZW58MHx8fHwxNzY4NDY0NzgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robot chat"
+    },
+    {
+      "id": "data-engineering",
+      "description": "A visual for data engineering and analytics platforms.",
+      "imageUrl": "https://images.unsplash.com/photo-1752584157416-b04359e4a16f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXRhJTIwcGlwZWxpbmV8ZW58MHx8fHwxNzY4NDY0NzgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data pipeline"
+    },
+    {
+      "id": "ai-automation",
+      "description": "A visual for AI automation in business.",
+      "imageUrl": "https://images.unsplash.com/photo-1651615721396-248623263391?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdXRvbWF0aW9uJTIwd29ya2Zsb3d8ZW58MHx8fHwxNzY4NDY0NzgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "automation workflow"
+    },
+    {
+      "id": "cybersecurity",
+      "description": "A visual for cybersecurity and data protection.",
+      "imageUrl": "https://images.unsplash.com/photo-1761805364384-00d9accbf727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZWN1cml0eSUyMHNoaWVsZHxlbnwwfHx8fDE3Njg0NjQ3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "security shield"
+    },
+    {
+      "id": "case-study-hr",
+      "description": "Image for an HR AI bot case study.",
+      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3Njg0NDIwNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "case-study-sales",
+      "description": "Image for a sales analytics data warehouse case study.",
+      "imageUrl": "https://images.unsplash.com/photo-1758691736542-c437fea2c673?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzYWxlcyUyMGNoYXJ0fGVufDB8fHx8MTc2ODQ2NDc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sales chart"
+    },
+    {
+      "id": "case-study-invoice",
+      "description": "Image for an AI invoice automation case study.",
+      "imageUrl": "https://images.unsplash.com/photo-1626937683469-88b0bfb4ec19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkb2N1bWVudHMlMjBpbnZvaWNlfGVufDB8fHx8MTc2ODQ2NDc4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "documents invoice"
+    },
+    {
+      "id": "about-founder",
+      "description": "A portrait style image for the about page.",
+      "imageUrl": "https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4Mzk4NzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "blog-ai",
+      "description": "Blog post image for AI in business.",
+      "imageUrl": "https://images.unsplash.com/photo-1616587656977-ac36a5a430bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzY4NDYzNzkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business meeting"
+    },
+    {
+      "id": "blog-data",
+      "description": "Blog post image for data engineering.",
+      "imageUrl": "https://images.unsplash.com/photo-1639066648921-82d4500abf1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2VydmVyJTIwcm9vbXxlbnwwfHx8fDE3Njg0MjI0Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "server room"
+    },
+    {
+      "id": "blog-security",
+      "description": "Blog post image for cloud security.",
+      "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjeWJlciUyMHNlY3VyaXR5fGVufDB8fHx8MTc2ODQ0NjgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cyber security"
+    }
+  ]
 }
