@@ -10,18 +10,17 @@ const solutions = [
   {
     id: 'ai-assistants',
     title: 'Custom AI Assistants Trained on Your Business Data',
-    description: 'Empower your team with secure, intelligent AI assistants that have a deep understanding of your internal knowledge. Our RAG (Retrieval-Augmented Generation) solutions allow you to chat with your documents, databases, and applications in natural language.',
+    description: 'I build secure, intelligent AI assistants that understand your internal knowledge. Using RAG (Retrieval-Augmented Generation), you can chat with your documents and data sources in natural language.',
     useCases: [
-      'HR policy assistant for employees',
-      'Legal document search and summarization',
-      'Customer support automation bot',
-      'Technical documentation Q&A for developers',
+      'Internal knowledge base search',
+      'Customer support question answering',
+      'Document summarization and analysis',
+      'Onboarding and training support',
     ],
     features: [
-      'Chat with PDFs, docs, and databases',
-      'Secure internal knowledge access',
-      'Role-based access control',
-      'Private cloud or on-prem deployment',
+      'Chat with PDFs, docs, and other data',
+      'Focused on secure data access',
+      'Can be deployed to your cloud environment',
     ],
     cta: 'Get an AI Assistant Demo',
     ctaLink: '/contact',
@@ -30,15 +29,14 @@ const solutions = [
   {
     id: 'data-platforms',
     title: 'Modern Data Platforms That Scale With Your Business',
-    description: 'We build end-to-end data engineering and analytics platforms that turn your raw data into a strategic asset. From data ingestion to BI dashboards, we create a single source of truth that powers your business decisions.',
+    description: "I build end-to-end data engineering platforms that turn raw data into a strategic asset. From data ingestion to BI dashboards, I create a single source of truth to power your business decisions.",
     services: [
-      'Cloud data lake & warehouse setup (Snowflake, Databricks)',
+      'Cloud data warehouse setup (e.g., BigQuery, Snowflake)',
       'Custom ETL/ELT pipeline development',
-      'Real-time data streaming and processing',
+      'Data modeling and architecture',
       'Business Intelligence (BI) dashboard creation',
-      'Legacy system migration to the cloud',
     ],
-    techStack: ['AWS', 'Azure', 'Databricks', 'Spark', 'Snowflake', 'Power BI', 'dbt'],
+    techStack: ['GCP', 'AWS', 'BigQuery', 'Spark', 'dbt', 'Looker'],
     cta: 'Discuss Your Data Platform',
     ctaLink: '/contact',
     image: PlaceHolderImages.find((img) => img.id === 'data-engineering'),
@@ -46,13 +44,12 @@ const solutions = [
   {
     id: 'ai-automation',
     title: 'Automate Your Business With AI',
-    description: 'Free up your team from repetitive, manual tasks by leveraging AI automation. We identify high-impact automation opportunities in your workflow and build intelligent systems to handle them, increasing efficiency and reducing errors.',
+    description: 'I can help identify and automate repetitive, manual tasks in your workflows using AI. This can increase efficiency and reduce errors, freeing up your team for more valuable work.',
     examples: [
-      'Automated invoice data extraction and processing',
-      'Intelligent resume screening for HR',
-      'Automatic email classification and routing',
-      'Customer support ticket categorization and assignment',
+      'Automated data extraction from documents',
+      'Intelligent routing of support tickets or emails',
       'Scheduled generation of business reports',
+      'Workflow triggers based on data events',
     ],
     cta: 'Automate Your Workflow',
     ctaLink: '/contact',
@@ -61,12 +58,12 @@ const solutions = [
   {
     id: 'cloud-security',
     title: 'Secure Your Data, AI & Cloud Infrastructure',
-    description: 'In the modern data landscape, security is not optional. We implement robust cybersecurity measures to protect your data, AI models, and cloud infrastructure from threats, ensuring compliance and peace of mind.',
+    description: "Security is a critical part of any data system. I implement security best practices to protect your data, AI models, and cloud infrastructure from threats.",
     services: [
-      'Cloud security posture audit and hardening',
+      'Cloud security posture review',
       'Data encryption and protection strategies',
-      'Identity and Access Management (IAM) implementation',
-      'Compliance readiness for GDPR, HIPAA, etc.',
+      'Identity and Access Management (IAM) setup',
+      'Following compliance guidelines (e.g., for GDPR, HIPAA)',
     ],
     cta: 'Request a Security Assessment',
     ctaLink: '/contact',
@@ -80,10 +77,10 @@ export default function SolutionsPage() {
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:px-8">
         <div className="mb-16 text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-            Our Solutions
+            My Solutions
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground">
-            Production-grade AI and data systems designed to solve real business problems.
+            Practical AI and data systems designed to solve real business problems.
           </p>
         </div>
 
@@ -105,7 +102,7 @@ export default function SolutionsPage() {
 
                 {solution.techStack && (
                   <div className="mt-6">
-                    <h4 className="font-semibold">Tech Stack:</h4>
+                    <h4 className="font-semibold">Common Tech Stack:</h4>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {solution.techStack.map(tech => (
                         <Badge key={tech} variant="secondary">{tech}</Badge>

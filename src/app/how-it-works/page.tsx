@@ -6,27 +6,27 @@ const processSteps = [
   {
     step: 1,
     title: 'Discovery & Strategy',
-    description: "We start by understanding your business goals, challenges, and requirements. This phase involves workshops and in-depth discussions to define the project scope, KPIs, and success criteria.",
+    description: "We'll start by discussing your business goals, challenges, and requirements. This helps me define the project scope and what success looks like for you.",
   },
   {
     step: 2,
     title: 'Architecture & Design',
-    description: "Our experts design a robust and scalable architecture tailored to your needs. We create detailed blueprints for the data platform, AI models, and security framework, ensuring a solid foundation for development.",
+    description: "I'll design a practical and scalable architecture for your needs, creating a clear blueprint for the data platform or AI model before development begins.",
   },
   {
     step: 3,
-    title: 'MVP Development (2-4 weeks)',
-    description: "We build a Minimum Viable Product (MVP) or Proof of Concept (PoC) to quickly demonstrate value and validate our approach. This agile process allows for rapid feedback and iteration.",
+    title: 'Iterative Development',
+    description: "I use an agile approach, often starting with a smaller-scale version to demonstrate value quickly. This allows for feedback and adjustments along the way.",
   },
   {
     step: 4,
-    title: 'Production Deployment',
-    description: "Once the MVP is approved, we develop the full-scale solution and deploy it to your production environment. We follow CI/CD best practices for a smooth and reliable rollout.",
+    title: 'Deployment',
+    description: "Once the solution is validated, I'll deploy it to your production environment, following best practices for a smooth rollout.",
   },
   {
     step: 5,
-    title: 'Support & Optimization',
-    description: "Our partnership doesn't end at deployment. We provide ongoing support, monitoring, and optimization to ensure your system performs at its best and continues to deliver value as your business evolves.",
+    title: 'Support & Handover',
+    description: "After deployment, I provide support and documentation to ensure your team can manage and get the most value from the new system.",
   },
 ];
 
@@ -36,10 +36,10 @@ export default function HowItWorksPage() {
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:px-8">
         <div className="mb-16 text-center">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-            How It Works
+            My Process
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-xl text-muted-foreground">
-            Our proven 5-step process for delivering production-grade AI & data solutions.
+            My 5-step process for delivering practical AI & data solutions.
           </p>
         </div>
 

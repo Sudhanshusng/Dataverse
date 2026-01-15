@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
             Case Studies
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-xl text-muted-foreground">
-            Real-world examples of how we solve complex data challenges and deliver business value.
+            Real-world examples of how I solve complex data challenges and deliver business value.
           </p>
         </div>
 

@@ -47,9 +47,9 @@ const coreOfferings = [
 ];
 
 const whyDataverse = [
-  { icon: <FastForward className="h-6 w-6 text-primary" />, text: 'Fast delivery (PoC in 2 weeks)' },
-  { icon: <ShieldCheck className="h-6 w-6 text-primary" />, text: 'Enterprise-grade security' },
-  { icon: <BrainCircuit className="h-6 w-6 text-primary" />, text: 'Deep data engineering expertise' },
+  { icon: <FastForward className="h-6 w-6 text-primary" />, text: 'Agile development process' },
+  { icon: <ShieldCheck className="h-6 w-6 text-primary" />, text: 'Security-focused approach' },
+  { icon: <BrainCircuit className="h-6 w-6 text-primary" />, text: 'Experienced data engineering' },
   { icon: <Cloud className="h-6 w-6 text-primary" />, text: 'Cloud-native architecture' },
   { icon: <Zap className="h-6 w-6 text-primary" />, text: 'Business-focused solutions' },
 ];
@@ -75,7 +75,7 @@ export default function Home() {
               Dataverse — AI, Data & Cybersecurity Solutions for Modern Businesses
             </h1>
             <p className="text-lg text-muted-foreground md:text-xl">
-              We build secure, intelligent data platforms and AI-powered solutions that help companies automate, scale, and make smarter decisions.
+              I build reliable data platforms and AI solutions to help your business grow and operate more efficiently.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
               <Button asChild size="lg" className="group">
@@ -106,7 +106,7 @@ export default function Home() {
       <section id="offerings" className="w-full py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Offerings</h2>
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">My Core Offerings</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Simple, clear, and built for business impact.</p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -130,8 +130,8 @@ export default function Home() {
       <section id="why-us" className="w-full bg-secondary/20 py-20 md:py-28">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 lg:px-8">
           <div className="space-y-6">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Dataverse?</h2>
-            <p className="text-lg text-muted-foreground">We build secure, production-grade AI & data systems — not just prototypes. This separates you from freelancers.</p>
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Work With Me?</h2>
+            <p className="text-lg text-muted-foreground">I build practical and maintainable data solutions that solve real business problems.</p>
             <ul className="space-y-4">
               {whyDataverse.map((item) => (
                 <li key={item.text} className="flex items-center gap-4">
@@ -144,16 +144,16 @@ export default function Home() {
            <div className="relative h-80 w-full">
              <div className="grid h-full w-full grid-cols-2 grid-rows-2 gap-4">
                 <div className="relative rounded-lg bg-card p-4 shadow-lg">
-                  <h3 className="font-headline text-4xl font-bold text-primary">2 weeks</h3>
-                  <p className="text-muted-foreground">Average time to Proof of Concept</p>
+                  <h3 className="font-headline text-4xl font-bold text-primary">4+ years</h3>
+                  <p className="text-muted-foreground">Of Data Engineering Experience</p>
                 </div>
                 <div className="relative rounded-lg bg-card p-4 shadow-lg">
                   <h3 className="font-headline text-4xl font-bold text-primary">100%</h3>
-                  <p className="text-muted-foreground">Enterprise-Grade Security Focus</p>
+                  <p className="text-muted-foreground">Focus on Deliverable Solutions</p>
                 </div>
                 <div className="relative col-span-2 rounded-lg bg-card p-4 shadow-lg">
-                  <h3 className="font-headline text-4xl font-bold text-primary">10+ years</h3>
-                  <p className="text-muted-foreground">Expertise in Data Engineering</p>
+                  <h3 className="font-headline text-4xl font-bold text-primary">Proven</h3>
+                  <p className="text-muted-foreground">Track Record of Project Success</p>
                 </div>
              </div>
            </div>
@@ -163,7 +163,7 @@ export default function Home() {
       <section id="industries" className="w-full py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">Industries We Serve</h2>
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">Industries I Serve</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Delivering specialized solutions for your unique challenges.</p>
           </div>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
@@ -181,8 +181,8 @@ export default function Home() {
 
       <section id="cta" className="w-full bg-secondary/20 py-20 md:py-28">
         <div className="container mx-auto text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to modernize your data & AI systems?</h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">Let's discuss how Dataverse can help you achieve your goals. Your first strategy call is on us.</p>
+          <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to improve your data & AI systems?</h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">Let's discuss how I can help you achieve your goals. Your first strategy call is on me.</p>
           <Button asChild size="lg" className="group mt-8">
             <Link href="/contact">
               Schedule a Free Strategy Call <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
