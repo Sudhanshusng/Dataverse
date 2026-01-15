@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 
 const solutions = [
   {
+    id: 'ai-assistants',
     title: 'Custom AI Assistants Trained on Your Business Data',
     description: 'Empower your team with secure, intelligent AI assistants that have a deep understanding of your internal knowledge. Our RAG (Retrieval-Augmented Generation) solutions allow you to chat with your documents, databases, and applications in natural language.',
     useCases: [
@@ -27,6 +28,7 @@ const solutions = [
     image: PlaceHolderImages.find((img) => img.id === 'ai-assistant'),
   },
   {
+    id: 'data-platforms',
     title: 'Modern Data Platforms That Scale With Your Business',
     description: 'We build end-to-end data engineering and analytics platforms that turn your raw data into a strategic asset. From data ingestion to BI dashboards, we create a single source of truth that powers your business decisions.',
     services: [
@@ -42,6 +44,7 @@ const solutions = [
     image: PlaceHolderImages.find((img) => img.id === 'data-engineering'),
   },
   {
+    id: 'ai-automation',
     title: 'Automate Your Business With AI',
     description: 'Free up your team from repetitive, manual tasks by leveraging AI automation. We identify high-impact automation opportunities in your workflow and build intelligent systems to handle them, increasing efficiency and reducing errors.',
     examples: [
@@ -56,6 +59,7 @@ const solutions = [
     image: PlaceHolderImages.find((img) => img.id === 'ai-automation'),
   },
   {
+    id: 'cloud-security',
     title: 'Secure Your Data, AI & Cloud Infrastructure',
     description: 'In the modern data landscape, security is not optional. We implement robust cybersecurity measures to protect your data, AI models, and cloud infrastructure from threats, ensuring compliance and peace of mind.',
     services: [
@@ -85,7 +89,7 @@ export default function SolutionsPage() {
 
         <div className="space-y-24">
           {solutions.map((solution, index) => (
-            <div key={solution.title} className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-16">
+            <div key={solution.title} id={solution.id} className="grid scroll-mt-24 grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-16">
               <div className={index % 2 === 1 ? 'md:order-last' : ''}>
                 <h2 className="font-headline text-3xl font-bold">{solution.title}</h2>
                 <p className="mt-4 text-lg text-muted-foreground">{solution.description}</p>

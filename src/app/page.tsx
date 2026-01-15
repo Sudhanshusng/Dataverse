@@ -4,7 +4,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
   ArrowRight,
   BrainCircuit,
-  CheckCircle,
   Cloud,
   Database,
   Factory,
@@ -25,21 +24,25 @@ const coreOfferings = [
     icon: <BrainCircuit className="h-8 w-8 text-primary" />,
     title: 'AI Knowledge Assistants (RAG Agents)',
     description: 'Custom AI assistants trained on your business data.',
+    href: '/solutions#ai-assistants',
   },
   {
     icon: <Database className="h-8 w-8 text-primary" />,
     title: 'Data Engineering & Analytics Platforms',
     description: 'Modern data platforms that scale with your business.',
+    href: '/solutions#data-platforms',
   },
   {
     icon: <Zap className="h-8 w-8 text-primary" />,
     title: 'AI Automation for Business',
     description: 'Automate your business processes with AI.',
+    href: '/solutions#ai-automation',
   },
   {
     icon: <ShieldCheck className="h-8 w-8 text-primary" />,
     title: 'Secure Cloud & Data Systems',
     description: 'Secure your data, AI, and cloud infrastructure.',
+    href: '/solutions#cloud-security',
   },
 ];
 
@@ -108,15 +111,17 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {coreOfferings.map((offering) => (
-              <Card key={offering.title} className="transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-lg">
-                <CardHeader className="items-center">
-                  {offering.icon}
-                  <CardTitle className="pt-4 text-center text-lg">{offering.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-center text-muted-foreground">{offering.description}</p>
-                </CardContent>
-              </Card>
+              <Link key={offering.title} href={offering.href} className="flex">
+                <Card className="flex w-full transform-gpu flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-primary/20 hover:shadow-lg">
+                  <CardHeader className="items-center">
+                    {offering.icon}
+                    <CardTitle className="pt-4 text-center text-lg">{offering.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-center text-muted-foreground">{offering.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

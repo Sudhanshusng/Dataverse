@@ -8,27 +8,27 @@
     },
     {
       "id": "ai-assistant",
-      "description": "A visual for an AI knowledge assistant.",
-      "imageUrl": "https://images.unsplash.com/photo-1620429948700-24e48a41d5aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb2JvdCUyMGNoYXR8ZW58MHx8fHwxNzY4NDY0NzgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "robot chat"
+      "description": "A person interacting with a futuristic AI assistant interface on a transparent screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8Mnx8ZGFzaGJvYXJkfGVufDB8fDB8fA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "ai assistant"
     },
     {
       "id": "data-engineering",
-      "description": "A visual for data engineering and analytics platforms.",
-      "imageUrl": "https://images.unsplash.com/photo-1752584157416-b04359e4a16f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXRhJTIwcGlwZWxpbmV8ZW58MHx8fHwxNzY4NDY0NzgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data pipeline"
+      "description": "A complex network of glowing data pipelines and servers in a modern data center.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8NHx8b2ZmaWNlJTIwbWVldGluZ3xlbnwwfHwwfHw&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "data center"
     },
     {
       "id": "ai-automation",
-      "description": "A visual for AI automation in business.",
-      "imageUrl": "https://images.unsplash.com/photo-1651615721396-248623263391?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdXRvbWF0aW9uJTIwd29ya2Zsb3d8ZW58MHx8fHwxNzY4NDY0NzgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "automation workflow"
+      "description": "Robotic arms and digital interfaces working together seamlessly in a smart factory setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092923946-9975b3fb2764?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8N3x8cm9ib3RpY3N8ZW58MHx8MHx8&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "robotic automation"
     },
     {
       "id": "cybersecurity",
-      "description": "A visual for cybersecurity and data protection.",
-      "imageUrl": "https://images.unsplash.com/photo-1761805364384-00d9accbf727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZWN1cml0eSUyMHNoaWVsZHxlbnwwfHx8fDE3Njg0NjQ3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "security shield"
+      "description": "A digital shield deflecting cyber threats in a matrix-like environment, representing data protection.",
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNTc5fDB8MXxzZWFyY2h8MTF8fGN5YmVyc2VjdXJpdHl8ZW58MHx8MHx8&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "digital security"
     },
     {
       "id": "case-study-hr",
