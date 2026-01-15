@@ -10,6 +10,7 @@ import {
   FastForward,
   HeartPulse,
   Landmark,
+  Play,
   Rocket,
   Scale,
   ShieldCheck,
@@ -68,38 +69,44 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <section className="relative w-full overflow-hidden bg-secondary/20">
-        <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 py-20 md:grid-cols-2 md:py-32 lg:px-8">
-          <div className="space-y-6 text-center md:text-left">
+      <section className="relative w-full overflow-hidden bg-background">
+        <div 
+          className="absolute inset-0 z-0" 
+          style={{
+            backgroundImage: 'linear-gradient(to right, hsla(var(--border)) 1px, transparent 1px), linear-gradient(to bottom, hsla(var(--border)) 1px, transparent 1px)',
+            backgroundSize: '40px 40px',
+            opacity: 0.3,
+          }}
+        ></div>
+        <div className="relative z-10 container mx-auto flex flex-col items-center justify-center space-y-8 px-4 py-24 text-center sm:py-32 lg:px-8 min-h-[70vh]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary/75 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              Enterprise-Grade Solutions
+            </div>
             <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              Dataverse — AI, Data & Cybersecurity Solutions for Modern Businesses
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">AI, Data & Cybersecurity</span>
+              <br />
+              Solutions for Modern Businesses
             </h1>
-            <p className="text-lg text-muted-foreground md:text-xl">
-              We build reliable data platforms and AI solutions to help your business grow and operate more efficiently.
+            <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
+              We build secure, intelligent data platforms and AI-powered solutions that help companies automate, scale, and make smarter decisions.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
-              <Button asChild size="lg" className="group">
+              <Button asChild size="lg" className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700">
                 <Link href="/contact">
                   Book Free Consultation <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/solutions">See Our Solutions</Link>
+              <Button asChild size="lg" variant="outline" className="border-blue-400/50 hover:bg-accent hover:border-accent-foreground/50">
+                <Link href="/solutions">
+                  <Play className="mr-2 h-4 w-4 fill-current" />
+                  See Our Solutions
+                </Link>
               </Button>
             </div>
-          </div>
-          <div className="relative h-64 w-full md:h-auto md:w-full">
-            {heroImage && (
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                priority
-                className="rounded-lg object-cover shadow-2xl"
-                data-ai-hint={heroImage.imageHint}
-              />
-            )}
-          </div>
         </div>
       </section>
 
