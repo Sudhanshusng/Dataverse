@@ -46,10 +46,10 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
-                  As a data engineer with four years of experience, our founder saw how companies can struggle to turn their data into a real asset. Too often, projects get stuck in the prototype phase or become too complex to maintain.
+                  With a background in building complex systems, we saw a gap where companies struggled to integrate their data, secure their infrastructure, and leverage AI effectively. Too often, projects lose momentum, become overly complex, or fail to address security from the start.
                 </p>
                 <p>
-                  Dataverse was founded to change that. We focus on building practical, secure, and maintainable AI and data systems. Our goal is to deliver solutions that are not just technically sound, but that also provide clear business value.
+                  Dataverse was founded to change that. We focus on building practical, secure, and maintainable systems across AI, data, and cybersecurity. Our goal is to deliver integrated solutions that are not just technically sound, but that also provide clear, measurable business value.
                 </p>
                 <p>
                   We believe in a collaborative approach, working closely with you to understand your challenges and build a solution that fits your needs.
@@ -68,8 +68,8 @@ export default function AboutPage() {
                 data-ai-hint={founderImage.imageHint}
               />
             )}
-            <h3 className="mt-6 font-headline text-xl font-semibold">Founder & Lead Engineer</h3>
-            <p className="text-sm text-muted-foreground">AI & Data Specialist</p>
+            <h3 className="mt-6 font-headline text-xl font-semibold">Our Team</h3>
+            <p className="text-sm text-muted-foreground">AI, Data & Cybersecurity Specialists</p>
           </div>
         </div>
         
