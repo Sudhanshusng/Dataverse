@@ -57,7 +57,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16 lg:px-8">
+    <div className="container mx-auto px-4 py-12 lg:px-8">
       <div className="mb-12 text-center">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
           Contact Us
@@ -159,7 +159,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-4">
                     <Phone className="h-6 w-6 text-primary" />
-                    <span className="text-muted-foreground">(555) 123-4567</span>
+                    <a href="tel:+919784672507" className="hover:text-primary">+91-9784672507</a>
                 </div>
             </div>
         </div>
