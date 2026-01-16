@@ -34,7 +34,7 @@ export default function HowItWorksPage() {
   return (
     <>
       <div className="container mx-auto px-4 py-16 lg:px-8">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center animate-in fade-in slide-in-from-top-5 duration-700">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             Our Process
           </h1>
@@ -47,14 +47,14 @@ export default function HowItWorksPage() {
           <div className="absolute left-1/2 top-0 -ml-px h-full w-0.5 bg-border" aria-hidden="true"></div>
           <div className="space-y-16">
             {processSteps.map((item, index) => (
-              <div key={item.title} className="relative flex items-start">
+              <div key={item.title} className="relative flex items-start animate-in fade-in-up duration-500" style={{ animationDelay: `${index * 150 + 200}ms`}}>
                 <div className="flex-shrink-0">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
                      <span className="text-xl font-bold">{item.step}</span>
                   </div>
                 </div>
-                <div className={`ml-8 flex-1 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                  <Card className="transform-gpu transition-transform hover:-translate-y-1">
+                <div className={`ml-8 flex-1`}>
+                  <Card className="transform-gpu transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <CardHeader>
                       <CardTitle className="font-headline text-2xl">{item.title}</CardTitle>
                     </CardHeader>

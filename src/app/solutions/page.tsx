@@ -75,7 +75,7 @@ export default function SolutionsPage() {
   return (
     <>
       <div className="container mx-auto px-4 py-16 lg:px-8">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center animate-in fade-in slide-in-from-top-5 duration-700">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             Our Solutions
           </h1>
@@ -86,8 +86,8 @@ export default function SolutionsPage() {
 
         <div className="space-y-20">
           {solutions.map((solution, index) => (
-            <div key={solution.title} id={solution.id} className="grid scroll-mt-24 grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-16">
-              <div className={index % 2 === 1 ? 'md:order-last' : ''}>
+            <div key={solution.title} id={solution.id} className="group grid scroll-mt-24 grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-16 animate-in fade-in-up duration-500" style={{ animationDelay: `${index * 150}ms`}}>
+              <div className={`${index % 2 === 1 ? 'md:order-last' : ''}`}>
                 <h2 className="font-headline text-3xl font-bold">{solution.title}</h2>
                 <p className="mt-4 text-lg text-muted-foreground">{solution.description}</p>
                 
@@ -119,13 +119,13 @@ export default function SolutionsPage() {
                 </Button>
               </div>
 
-              <div className="relative h-96 w-full">
+              <div className="relative h-96 w-full overflow-hidden rounded-lg shadow-2xl">
                 {solution.image && (
                   <Image
                     src={solution.image.imageUrl}
                     alt={solution.image.description}
                     fill
-                    className="rounded-lg object-cover shadow-2xl"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     data-ai-hint={solution.image.imageHint}
                   />
                 )}

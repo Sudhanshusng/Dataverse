@@ -45,7 +45,7 @@ export default function BlogPage() {
   return (
     <>
       <div className="container mx-auto px-4 py-12 lg:px-8">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center animate-in fade-in slide-in-from-top-5 duration-700">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             Insights & Blog
           </h1>
@@ -55,52 +55,54 @@ export default function BlogPage() {
         </div>
 
         <Accordion type="single" collapsible className="w-full space-y-8">
-          {blogPosts.map((post) => (
-            <AccordionItem value={post.title} key={post.title} className="border-b-0">
-              <Card className="flex flex-col overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20">
-                {post.image && (
-                  <div className="relative h-56 w-full">
-                    <Image
-                      src={post.image.imageUrl}
-                      alt={post.description}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={post.image.imageHint}
-                    />
-                  </div>
-                )}
-                <CardHeader>
-                  <Badge variant="secondary" className="w-fit">{post.category}</Badge>
-                  <CardTitle className="pt-2 font-headline">{post.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{post.description}</p>
-                </CardContent>
-                <CardFooter className="flex justify-between items-center">
-                  <div className="text-sm text-muted-foreground">
-                    <p>{post.author}</p>
-                    <p>{post.date}</p>
-                  </div>
-                  <AccordionTrigger asChild>
-                    <Button variant="link" className="group p-0 font-semibold text-primary no-underline hover:no-underline">
-                        <span className='group-data-[state=open]:hidden'>Read More</span>
-                        <span className='group-data-[state=closed]:hidden'>Read Less</span>
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-90" />
-                    </Button>
-                  </AccordionTrigger>
-                </CardFooter>
-                <AccordionContent>
-                    <CardContent className="pt-0 space-y-4 text-muted-foreground">
-                        {post.fullContent.split('\n\n').map((p, i) => <p key={i} dangerouslySetInnerHTML={{ __html: p.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></p>)}
+          {blogPosts.map((post, i) => (
+            <div key={post.title} className="animate-in fade-in-up duration-500" style={{ animationDelay: `${i * 150 + 200}ms`}}>
+                <AccordionItem value={post.title} className="border-b-0">
+                <Card className="group flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                    {post.image && (
+                    <div className="relative h-56 w-full overflow-hidden">
+                        <Image
+                        src={post.image.imageUrl}
+                        alt={post.description}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        data-ai-hint={post.image.imageHint}
+                        />
+                    </div>
+                    )}
+                    <CardHeader>
+                    <Badge variant="secondary" className="w-fit">{post.category}</Badge>
+                    <CardTitle className="pt-2 font-headline">{post.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{post.description}</p>
                     </CardContent>
-                </AccordionContent>
-              </Card>
-            </AccordionItem>
+                    <CardFooter className="flex justify-between items-center">
+                    <div className="text-sm text-muted-foreground">
+                        <p>{post.author}</p>
+                        <p>{post.date}</p>
+                    </div>
+                    <AccordionTrigger asChild>
+                        <Button variant="link" className="group p-0 font-semibold text-primary no-underline hover:no-underline">
+                            <span className='group-data-[state=open]:hidden'>Read More</span>
+                            <span className='group-data-[state=closed]:hidden'>Read Less</span>
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-90" />
+                        </Button>
+                    </AccordionTrigger>
+                    </CardFooter>
+                    <AccordionContent>
+                        <CardContent className="pt-0 space-y-4 text-muted-foreground">
+                            {post.fullContent.split('\n\n').map((p, i) => <p key={i} dangerouslySetInnerHTML={{ __html: p.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></p>)}
+                        </CardContent>
+                    </AccordionContent>
+                </Card>
+                </AccordionItem>
+            </div>
           ))}
         </Accordion>
         
-        <div className="mt-16 text-center">
-          <Card className="inline-block">
+        <div className="mt-16 text-center animate-in fade-in-up duration-500 delay-500">
+          <Card className="inline-block transition-transform duration-300 hover:-translate-y-1">
               <CardHeader>
                   <CardTitle className="font-headline">Stay Tuned</CardTitle>
               </CardHeader>

@@ -58,7 +58,7 @@ export default function ContactPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 lg:px-8">
-      <div className="mb-12 text-center">
+      <div className="mb-12 text-center animate-in fade-in slide-in-from-top-5 duration-700">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
           Contact Us
         </h1>
@@ -68,75 +68,77 @@ export default function ContactPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle className="font-headline text-2xl">Send us a Message</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your Name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="company"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Company</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your Company" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="your.email@company.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="problem"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Problem Description</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder="Tell us a bit about your project or challenge..." {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" className="w-full">
-                  Send Message
-                </Button>
-              </form>
-            </Form>
-          </CardContent>
-        </Card>
+        <div className="animate-in fade-in-up duration-500 delay-200">
+            <Card className="transition-shadow duration-300 hover:shadow-xl">
+            <CardHeader>
+                <CardTitle className="font-headline text-2xl">Send us a Message</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                        <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                            <Input placeholder="Your Name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                        </FormItem>
+                    )}
+                    />
+                    <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                        <FormItem>
+                        <FormLabel>Company</FormLabel>
+                        <FormControl>
+                            <Input placeholder="Your Company" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                        </FormItem>
+                    )}
+                    />
+                    <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                        <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                            <Input type="email" placeholder="your.email@company.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                        </FormItem>
+                    )}
+                    />
+                    <FormField
+                    control={form.control}
+                    name="problem"
+                    render={({ field }) => (
+                        <FormItem>
+                        <FormLabel>Problem Description</FormLabel>
+                        <FormControl>
+                            <Textarea placeholder="Tell us a bit about your project or challenge..." {...field} />
+                        </FormControl>
+                        <FormMessage />
+                        </FormItem>
+                    )}
+                    />
+                    <Button type="submit" className="w-full">
+                    Send Message
+                    </Button>
+                </form>
+                </Form>
+            </CardContent>
+            </Card>
+        </div>
 
-        <div className="space-y-8">
-            <Card>
+        <div className="space-y-8 animate-in fade-in-up duration-500 delay-400">
+            <Card className="transition-shadow duration-300 hover:shadow-xl">
                 <CardHeader>
                     <CardTitle className="font-headline text-2xl">Book a Free Consultation</CardTitle>
                 </CardHeader>
@@ -153,11 +155,11 @@ export default function ContactPage() {
             </Card>
 
             <div className="space-y-4 text-lg">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 transition-colors duration-300 hover:text-primary">
                     <Mail className="h-6 w-6 text-primary" />
                     <a href="mailto:contact@dataverse.com" className="hover:text-primary">contact@dataverse.com</a>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 transition-colors duration-300 hover:text-primary">
                     <Phone className="h-6 w-6 text-primary" />
                     <a href="tel:+919784672507" className="hover:text-primary">+91-9784672507</a>
                 </div>

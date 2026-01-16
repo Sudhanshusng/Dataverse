@@ -41,7 +41,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <div className="container mx-auto px-4 py-16 lg:px-8">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center animate-in fade-in slide-in-from-top-5 duration-700">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             Case Studies
           </h1>
@@ -52,51 +52,53 @@ export default function CaseStudiesPage() {
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-1">
           {caseStudies.map((study, index) => (
-            <Card key={study.title} className="overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20">
-              <div className={`grid grid-cols-1 md:grid-cols-2 items-center`}>
-                <div className={`relative h-80 w-full ${index % 2 === 1 ? 'md:order-last' : ''}`}>
-                  {study.image && (
-                    <Image
-                      src={study.image.imageUrl}
-                      alt={study.title}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={study.image.imageHint}
-                    />
-                  )}
+            <div key={study.title} className="animate-in fade-in-up duration-500" style={{ animationDelay: `${index * 150 + 200}ms`}}>
+              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <div className={`grid grid-cols-1 md:grid-cols-2 items-center`}>
+                  <div className={`relative h-80 w-full overflow-hidden ${index % 2 === 1 ? 'md:order-last' : ''}`}>
+                    {study.image && (
+                      <Image
+                        src={study.image.imageUrl}
+                        alt={study.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        data-ai-hint={study.image.imageHint}
+                      />
+                    )}
+                  </div>
+                  <div className="p-8">
+                    <CardHeader className="p-0">
+                      <p className="text-sm font-semibold text-primary">{study.client}</p>
+                      <CardTitle className="pt-1 font-headline text-2xl">{study.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="mt-4 space-y-4 p-0">
+                      <div>
+                          <h4 className="font-semibold text-foreground">Problem</h4>
+                          <p className="text-muted-foreground">{study.problem}</p>
+                      </div>
+                      <div>
+                          <h4 className="font-semibold text-foreground">Solution</h4>
+                          <p className="text-muted-foreground">{study.solution}</p>
+                      </div>
+                      <div>
+                          <h4 className="font-semibold text-foreground">Business Impact</h4>
+                          <p className="text-muted-foreground font-bold text-foreground/90">{study.impact}</p>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="mt-6 flex flex-wrap gap-2 p-0">
+                      {study.techStack.map(tag => (
+                        <Badge key={tag} variant="secondary">{tag}</Badge>
+                      ))}
+                    </CardFooter>
+                  </div>
                 </div>
-                <div className="p-8">
-                  <CardHeader className="p-0">
-                    <p className="text-sm font-semibold text-primary">{study.client}</p>
-                    <CardTitle className="pt-1 font-headline text-2xl">{study.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="mt-4 space-y-4 p-0">
-                    <div>
-                        <h4 className="font-semibold text-foreground">Problem</h4>
-                        <p className="text-muted-foreground">{study.problem}</p>
-                    </div>
-                     <div>
-                        <h4 className="font-semibold text-foreground">Solution</h4>
-                        <p className="text-muted-foreground">{study.solution}</p>
-                    </div>
-                     <div>
-                        <h4 className="font-semibold text-foreground">Business Impact</h4>
-                        <p className="text-muted-foreground font-bold text-foreground/90">{study.impact}</p>
-                    </div>
-                  </CardContent>
-                  <CardFooter className="mt-6 flex flex-wrap gap-2 p-0">
-                    {study.techStack.map(tag => (
-                      <Badge key={tag} variant="secondary">{tag}</Badge>
-                    ))}
-                  </CardFooter>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-            <Card className="inline-block">
+        <div className="mt-16 text-center animate-in fade-in-up duration-500 delay-500">
+            <Card className="inline-block transition-transform duration-300 hover:-translate-y-1">
                 <CardHeader>
                     <CardTitle className="font-headline">More Success Stories Coming Soon</CardTitle>
                 </CardHeader>

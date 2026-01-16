@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <>
       <div className="container mx-auto px-4 py-16 lg:px-8">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center animate-in fade-in slide-in-from-top-5 duration-700">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             About Us
           </h1>
@@ -39,8 +39,8 @@ export default function AboutPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          <div className="md:col-span-2">
-            <Card className="h-full">
+          <div className="md:col-span-2 animate-in fade-in-up duration-500 delay-200">
+            <Card className="h-full transition-shadow duration-300 hover:shadow-xl">
               <CardHeader>
                 <CardTitle className="font-headline text-2xl">Our Story</CardTitle>
               </CardHeader>
@@ -57,14 +57,14 @@ export default function AboutPage() {
               </CardContent>
             </Card>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center animate-in fade-in-up duration-500 delay-400">
             {founderImage && (
               <Image
                 src={founderImage.imageUrl}
                 alt={founderImage.description}
                 width={300}
                 height={300}
-                className="rounded-full object-cover shadow-lg"
+                className="rounded-full object-cover shadow-lg transition-transform duration-300 hover:scale-105"
                 data-ai-hint={founderImage.imageHint}
               />
             )}
@@ -73,45 +73,51 @@ export default function AboutPage() {
           </div>
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center animate-in fade-in-up duration-500">
             <h2 className="font-headline text-3xl font-bold">Our Core Values</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">The principles that guide our work.</p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {coreValues.map((value) => (
-                <Card key={value.title}>
-                    <CardHeader className='items-center'>
-                        <CheckCircle className="h-8 w-8 text-primary" />
-                        <CardTitle className="pt-2 font-headline text-xl">{value.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-center text-muted-foreground">{value.description}</p>
-                    </CardContent>
-                </Card>
+            {coreValues.map((value, i) => (
+                <div key={value.title} className="animate-in fade-in-up duration-500" style={{ animationDelay: `${i * 100 + 300}ms`}}>
+                    <Card className="h-full transition-transform duration-300 hover:-translate-y-2">
+                        <CardHeader className='items-center'>
+                            <CheckCircle className="h-8 w-8 text-primary" />
+                            <CardTitle className="pt-2 font-headline text-xl">{value.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-center text-muted-foreground">{value.description}</p>
+                        </CardContent>
+                    </Card>
+                </div>
             ))}
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <Card>
-            <CardHeader>
-              <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                To help businesses make better, data-driven decisions through reliable and secure systems. We aim to make data and AI accessible and effective, no matter the size of your company.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="font-headline text-2xl">Our Tech Philosophy</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                We believe in building robust and scalable systems using modern, cloud-native technologies. We focus on practical, production-ready solutions over quick-and-dirty prototypes.
-              </p>
-            </CardContent>
-          </Card>
+          <div className="animate-in fade-in-up duration-500 delay-200">
+            <Card className="h-full transition-shadow duration-300 hover:shadow-lg">
+                <CardHeader>
+                <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
+                </CardHeader>
+                <CardContent>
+                <p className="text-muted-foreground">
+                    To help businesses make better, data-driven decisions through reliable and secure systems. We aim to make data and AI accessible and effective, no matter the size of your company.
+                </p>
+                </CardContent>
+            </Card>
+          </div>
+          <div className="animate-in fade-in-up duration-500 delay-400">
+            <Card className="h-full transition-shadow duration-300 hover:shadow-lg">
+                <CardHeader>
+                <CardTitle className="font-headline text-2xl">Our Tech Philosophy</CardTitle>
+                </CardHeader>
+                <CardContent>
+                <p className="text-muted-foreground">
+                    We believe in building robust and scalable systems using modern, cloud-native technologies. We focus on practical, production-ready solutions over quick-and-dirty prototypes.
+                </p>
+                </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
       <CtaSection />
