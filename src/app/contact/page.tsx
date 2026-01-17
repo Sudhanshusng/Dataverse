@@ -18,6 +18,8 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Calendar, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
+import { useTransition } from 'react';
+import { sendContactEmail } from './actions';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -36,6 +38,7 @@ const formSchema = z.object({
 
 export default function ContactPage() {
   const { toast } = useToast();
+  const [isPending, startTransition] = useTransition();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -48,12 +51,22 @@ export default function ContactPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: "Thanks for reaching out. We'll get back to you shortly.",
+    startTransition(async () => {
+      const result = await sendContactEmail(values);
+      if (result.success) {
+        toast({
+          title: 'Message Sent!',
+          description: "Thanks for reaching out. We'll get back to you shortly.",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: 'Error',
+          description: result.error || 'Something went wrong.',
+          variant: 'destructive',
+        });
+      }
     });
-    form.reset();
   }
 
   return (
@@ -128,8 +141,8 @@ export default function ContactPage() {
                         </FormItem>
                     )}
                     />
-                    <Button type="submit" className="w-full">
-                    Send Message
+                    <Button type="submit" className="w-full" disabled={isPending}>
+                      {isPending ? 'Sending...' : 'Send Message'}
                     </Button>
                 </form>
                 </Form>
